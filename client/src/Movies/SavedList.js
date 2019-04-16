@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
-export default class SavedList extends Component {
+class SavedList extends Component {
   constructor(props) {
     super(props);
   }
+
+ 
 
   render() {
     return (
@@ -13,7 +15,17 @@ export default class SavedList extends Component {
           <span className="saved-movie">{movie.title}</span>
         ))}
         <div className="home-button">Home</div>
-      </div>
+          <button onClick={routeToShop} className="home-button">
+            Home
+          </button>
+        </div>
     );
   }
 }
+
+const routeToShop = event => {
+  event.preventDefault();
+  props.history.push("/movies")
+};
+
+export default SavedList;
