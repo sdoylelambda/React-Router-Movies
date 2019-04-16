@@ -14,8 +14,8 @@ class SavedList extends Component {
         {this.props.list.map(movie => (
           <span className="saved-movie">{movie.title}</span>
         ))}
-        <div className="home-button">Home</div>
-          <button onClick={routeToShop} className="home-button">
+        {/* <div className="home-button">Home</div> */}
+          <button onClick={ routeToShop } className="home-button">
             Home
           </button>
         </div>
@@ -25,7 +25,7 @@ class SavedList extends Component {
 
 const routeToShop = event => {
   event.preventDefault();
-  props.history.push("/movies")
+  this.props.history.push("/MovieList");
 };
 
 export default SavedList;
