@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import{ NavLink, Link } from 'react-router-dom';
 
 class SavedList extends Component {
   constructor(props) {
@@ -15,7 +16,7 @@ class SavedList extends Component {
           <span className="saved-movie">{movie.title}</span>
         ))}
         {/* <div className="home-button">Home</div> */}
-          <button onClick={ routeToShop } className="home-button">
+          <button onClick={ routeToHome } className="home-button">
             Home
           </button>
         </div>
@@ -23,9 +24,10 @@ class SavedList extends Component {
   }
 }
 
-const routeToShop = event => {
+const routeToHome = event => {
   event.preventDefault();
-  this.props.history.push("/MovieList");
+  
+  this.props.history.push("/movie-home");
 };
 
 export default SavedList;

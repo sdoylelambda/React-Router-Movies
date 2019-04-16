@@ -51,6 +51,7 @@ function MovieDetails({ movie }) {
         </div>
       ))}
     </div>
+    
     // <Link to={`/movies/${movie.id}`}>
     //   <MovieCard movie={movie} />
     // </Link>
